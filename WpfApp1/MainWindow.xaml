@@ -33,7 +33,5 @@
                 <TextBlock x:Name="pBox" Height="100" Width="300"></TextBlock>
             </StackPanel>
         </UniformGrid>
- 
-        
     </DockPanel>
 </Window>

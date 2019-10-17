@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.757
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RDotNet.ConsoleApp2", "RDotNet.ConsoleApp2\RDotNet.ConsoleApp2.csproj", "{9306E525-F97B-422F-BCC2-8D08EE76834E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RDotNet.ConsoleApp", "RDotNet.ConsoleApp2\RDotNet.ConsoleApp.csproj", "{9306E525-F97B-422F-BCC2-8D08EE76834E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfApp1", "WpfApp1\WpfApp1.csproj", "{0F41E9E2-2A1B-49FC-A65B-9F03A31A09AF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RDotNet.PlotApp", "WpfApp1\RDotNet.PlotApp.csproj", "{0F41E9E2-2A1B-49FC-A65B-9F03A31A09AF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RPredict", "RPredict\RPredict.csproj", "{30B1807B-5752-4262-BD4B-F1711AABAD25}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RPredict", "RPredict\RPredict.csproj", "{30B1807B-5752-4262-BD4B-F1711AABAD25}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

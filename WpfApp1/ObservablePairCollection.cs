@@ -1,11 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace WpfApp1
+﻿namespace WpfApp1
 {
+    using System;
+    using System.Collections.Generic;
     using System.Collections.ObjectModel;
     using System.ComponentModel;
 
+    /// <summary>
+    /// From <a href="https://www.broculos.net/2014/03/wpf-editable-datagrid-and.html"></a>
+    /// </summary>
+    /// <typeparam name="TKey"></typeparam>
+    /// <typeparam name="TValue"></typeparam>
     public class Pair<TKey, TValue> : INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged;

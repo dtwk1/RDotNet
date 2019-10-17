@@ -1,17 +1,14 @@
 ﻿namespace WpfApp1
 {
+    using Csv;
+    using OxyPlot;
+    using OxyPlot.Series;
+    using RDotNet;
     using System;
     using System.Collections.Generic;
     using System.IO;
     using System.Linq;
     using System.Windows;
-
-    using Csv;
-
-    using OxyPlot;
-    using OxyPlot.Series;
-
-    using RDotNet;
 
     /// <summary>
     /// Interaction logic for MainWindow.xaml
@@ -31,8 +28,7 @@
 
         //private int number;
 
-        public event EventHandler<MyEventArgs> numberEvent;
-
+        public event Action<int> numberEvent;
 
         public MainWindow()
         {
@@ -51,16 +47,15 @@
 
             Act(number);
 
-            this.numberEvent += (a, b) =>
+            this.numberEvent += num =>
                 {
-                    number = b.Number;
+                    number = num;
                     var (x, y) = GetNumericVectors();
                     this.xBox.Text = string.Join(Environment.NewLine, SelectResult(x));
                     this.yBox.Text = string.Join(Environment.NewLine, SelectResult(y));
                     this.pBox.Text = string.Join(" ", engine.Evaluate("t.test(x,y)").AsList());
                     this.PlotPredictionAndData(number, x, y);
                 };
-
         }
 
         public ObservablePairCollection<double, double> Values { get; } = new ObservablePairCollection<double, double>();
@@ -73,7 +68,7 @@
         }
 
         private void PlotPoints(REngine engine, NumericVector vectorx, NumericVector vectory)
-        {
+        =>
             this.Dispatcher?.InvokeAsync(
                 () =>
                     {
@@ -98,7 +93,7 @@
                         this.PlotView.Model.Series.Add(sSeries);
                         this.PlotView.Model.InvalidatePlot(true);
                     });
-        }
+        
 
         private void MyUpDownControl_OnValueChanged(object sender, RoutedPropertyChangedEventArgs<object> e)
         {
@@ -106,7 +101,7 @@
 
             if (number > 0 && number < 5)
             {
-                this.numberEvent?.Invoke(null, new MyEventArgs(number));
+                this.numberEvent?.Invoke(number);
             }
             else
             {
@@ -158,19 +153,8 @@
             yield return $"Size of result as character vector: {characterResult.Length}";
             yield return $"First vector result as character: {characterResult.FirstOrDefault()}";
         }
-
-        public class MyEventArgs : EventArgs
-        {
-            public readonly int Number;
-
-            public MyEventArgs(int number)
-            {
-                this.Number = number;
-            }
-        }
     }
 }
-
 
 // static void a()
 // {
