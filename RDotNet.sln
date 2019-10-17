@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.757
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RDotNet.ConsoleApp", "RDotNet.ConsoleApp2\RDotNet.ConsoleApp.csproj", "{9306E525-F97B-422F-BCC2-8D08EE76834E}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RDotNet.PlotApp", "WpfApp1\RDotNet.PlotApp.csproj", "{0F41E9E2-2A1B-49FC-A65B-9F03A31A09AF}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RPredict", "RPredict\RPredict.csproj", "{30B1807B-5752-4262-BD4B-F1711AABAD25}"
@@ -15,10 +13,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{9306E525-F97B-422F-BCC2-8D08EE76834E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9306E525-F97B-422F-BCC2-8D08EE76834E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9306E525-F97B-422F-BCC2-8D08EE76834E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9306E525-F97B-422F-BCC2-8D08EE76834E}.Release|Any CPU.Build.0 = Release|Any CPU
 		{0F41E9E2-2A1B-49FC-A65B-9F03A31A09AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{0F41E9E2-2A1B-49FC-A65B-9F03A31A09AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0F41E9E2-2A1B-49FC-A65B-9F03A31A09AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
